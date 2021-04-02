@@ -108,7 +108,58 @@
 
 // console.log(DNAStrand("ATTGC"))
 
-function sumTwoSmallestNumbers(numbers) {  
-  //Code here
+// function sumTwoSmallestNumbers(numbers){  
+//   numbers = numbers.sort(function(a, b){return a - b; });
+//   return numbers[0] + numbers[1];
+// };
+
+// function isTriangle(a,b,c)
+// {
+//   let one = (a * a) + (b*b)
+//   console.log(one)
+//   let three = c * c
+//   console.log(three)
+
+//   if(one === three){
+//     return true
+//   }else{
+//     return false;
+//   }
+// }
+
+// console.log(isTriangle(1,2,2))
+
+// function duplicateCount(text){
+
+//   let arr = text.toLowerCase().split('')
+
+//   let farr = arr.filter((value, index) => arr.indexOf(value) != index)
+
+//   console.log(farr)
+
+//   if(arr.length === 0){
+//     return 0
+//   } else if(farr[0] === farr[1] ){
+//     return 1
+//   } else{
+//     return farr.length
+//   }
+// }
+
+// console.log(duplicateCount("abcde"))
+
+function longest(s1, s2) {
+  // your code
+
+  let s11 = s1.split('')
+  let s22 = s2.split('')
   
+  let arr = s11.concat(s22)
+
+  let farr = arr.filter((value, index) => arr.indexOf(value) === index)
+
+  return farr.sort().join('')
+
 }
+
+console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
