@@ -148,18 +148,28 @@
 
 // console.log(duplicateCount("abcde"))
 
-function longest(s1, s2) {
-  // your code
+// function longest(s1, s2) {
+//   // your code
 
-  let s11 = s1.split('')
-  let s22 = s2.split('')
+//   let s11 = s1.split('')
+//   let s22 = s2.split('')
   
-  let arr = s11.concat(s22)
+//   let arr = s11.concat(s22)
 
-  let farr = arr.filter((value, index) => arr.indexOf(value) === index)
+//   let farr = arr.filter((value, index) => arr.indexOf(value) === index)
 
-  return farr.sort().join('')
+//   return farr.sort().join('')
 
+// }
+
+// console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
+
+const prac = (s1, s2) => {
+    let arr1 = s1.split('')
+  let arr2 = s2.split('')
+  let newArr = arr1.concat(arr2)
+  newArr = newArr.filter((value,index)=> newArr.indexOf(value) === index)
+  return newArr.sort().join('')
 }
 
-console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
+console.log(prac("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
